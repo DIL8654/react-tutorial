@@ -65,6 +65,10 @@ const Book = (props) => {
   const clickHandler = () => {
     alert("Hellow click");
   };
+
+  const complexexample = (author) => {
+    console.log(author);
+  };
   return (
     <article className="book">
       {/* <Image></Image>
@@ -75,8 +79,10 @@ const Book = (props) => {
       <h1 onClick={() => console.log(title)}>{title}</h1>
       <h4>{author}</h4>
       <button type="button" onClick={clickHandler}>
-        {" "}
         reference example
+      </button>
+      <button type="button" onClick={complexexample(author)}>
+        complext button
       </button>
     </article>
   );
