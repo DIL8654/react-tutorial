@@ -72,7 +72,12 @@ const Book = (props) => {
     console.log(author);
   };
   return (
-    <article className="book">
+    <article
+      className="book"
+      onMouseOver={() => {
+        console.log(title);
+      }}
+    >
       {/* <Image></Image>
       <Title></Title>
       <Author></Author> */}
