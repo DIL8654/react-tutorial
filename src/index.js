@@ -62,7 +62,9 @@ const Book = (props) => {
   // console.log(props);
   const { title, author, img } = props.book;
 
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    console.log(e);
+    console.log(e.target);
     alert("Hellow click");
   };
 
