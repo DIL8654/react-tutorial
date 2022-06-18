@@ -2,12 +2,14 @@ import React from "react";
 import ReactDom from "react-dom";
 import { books } from "./Books";
 import Book from "./Book";
+import { greeting } from "./test/test";
 //CSS
 import "./index.css";
 
 //setup variables
 
 function BookList() {
+  console.log(greeting);
   return (
     <section className="bookList">
       {books.map((book, index) => {
