@@ -1,31 +1,11 @@
 import React from "react";
 import ReactDom from "react-dom";
-
+import { books } from "./Books";
+import Book from "./Book";
 //CSS
 import "./index.css";
 
 //setup variables
-
-const books = [
-  {
-    id: 1,
-    title: "Mastering Kafka with Oreilly",
-    author: "Mitch Seymour",
-    img: "https://images-na.ssl-images-amazon.com/images/I/51BCQMHrV2S._SX379_BO1,204,203,200_.jpg",
-  },
-  {
-    id: 2,
-    title: "Head First JavaScript Programming",
-    author: "Eric Preeman",
-    img: "https://images-na.ssl-images-amazon.com/images/I/51kTKuJSlqS._SX422_BO1,204,203,200_.jpg",
-  },
-  {
-    id: 3,
-    title: "Head First Java",
-    author: "Cathey Sierra",
-    img: "https://images-na.ssl-images-amazon.com/images/I/51dBjBGQFXS._SX431_BO1,204,203,200_.jpg",
-  },
-];
 
 function BookList() {
   return (
@@ -57,43 +37,6 @@ function BookList() {
 //     </>
 //   );
 // }
-
-const Book = (props) => {
-  // console.log(props);
-  const { title, author, img } = props.book;
-
-  const clickHandler = (e) => {
-    console.log(e);
-    console.log(e.target);
-    alert("Hellow click");
-  };
-
-  const complexexample = (author) => {
-    console.log(author);
-  };
-  return (
-    <article
-      className="book"
-      onMouseOver={() => {
-        console.log(title);
-      }}
-    >
-      {/* <Image></Image>
-      <Title></Title>
-      <Author></Author> */}
-
-      <img src={img} alt="" />
-      <h1 onClick={() => console.log(title)}>{title}</h1>
-      <h4>{author}</h4>
-      <button type="button" onClick={clickHandler}>
-        reference example
-      </button>
-      <button type="button" onClick={() => complexexample(author)}>
-        complext button
-      </button>
-    </article>
-  );
-};
 
 // seperate components
 const Image = () => (
